@@ -1,1 +1,1 @@
-
+print(f"No Spectate")
