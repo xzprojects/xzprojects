@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XZProjects | Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" id="usr" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" id="pwd" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="remember-forgot">
+                <label>For secure, <b>Remember me</b> disabled</label>
+            </div>
+
+            <button class="btn" id="btn" onclick="login()">Login</button>
+            
+            <div class="sub">
+                <p><b>Login</b> will direct URL</p>
+            </div>
+        </div>
+    </div>
+    <div class="sub-img">
+        <a href="http://www.freepik.com">Designed by Freepik</a>
+    </div>
+</body>
+<script>
+    var usrName = document.getElementById("usr");
+    var usrPass = document.getElementById("pwd");
+
+    function login() {
+        window.location.replace(`/?login=direct&usr=${usrName.value}&pwd=${usrPass.value}&encode=true&require=none`);
+    }
+</script>
+</html>
