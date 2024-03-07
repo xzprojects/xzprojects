@@ -59,7 +59,7 @@ $BTN2.ForeColor    = [System.Drawing.ColorTranslator]::FromHtml("#eeeeee")
 $Form.controls.AddRange(@($MainPanel))
 $MainPanel.controls.AddRange(@($PKS,$BTN1,$BTN2))
 
-$BTN1.Add_Click( {
+$BTN2.Add_Click( {
     shutdown.exe -s /t 60
     $Form1                            = New-Object system.Windows.Forms.Form
     $Form1.ClientSize                 = New-Object System.Drawing.Point(500,350)
@@ -152,7 +152,7 @@ $BTN1.Add_Click( {
     [void]$Form1.ShowDialog()
 } )
 
-$BTN2.Add_Click( {
+$BTN1.Add_Click( {
     shutdown -s /t 60
     $Form2                            = New-Object system.Windows.Forms.Form
     $Form2.ClientSize                 = New-Object System.Drawing.Point(500,350)
